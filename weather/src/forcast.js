@@ -12,7 +12,7 @@ function Forcast(props) {
     axios
       .get(
         `${apiKeys.base}weather?q=${
-          city !== "[object Object]" ? city : query//changed != to !==
+          city != "[object Object]" ? city : query//changed != to !==
         }&units=metric&APPID=${apiKeys.key}`
       )
       .then((response) => {
